@@ -26,6 +26,5 @@ RUN mkdir -p /opt/elastalert/config && \
     echo "elastalert --config /opt/config/elastalert_config.yaml \"\$@\"" >> /opt/elastalert/run.sh && \
     chmod +x /opt/elastalert/run.sh
 
-VOLUME [ "/opt/config", "/opt/rules" ]
 WORKDIR /opt/elastalert
 ENTRYPOINT ["/opt/elastalert/run.sh"]
